@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#0b74ff;
+  --radius:10px;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%;}
+body{font-family:Inter, system-ui, Arial; background:var(--bg); margin:0; color:#111}
+
+.container{max-width:1100px;margin:32px auto;padding:16px}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,42,0.06);padding:18px}
+
+nav{background:transparent;padding:12px 24px}
+nav a{color:var(--accent);text-decoration:none;margin-right:12px;font-weight:600}
+
+h2{margin-top:0}
+
+/* simple form */
+input,select,button{padding:10px 12px;border-radius:8px;border:1px solid #e6e9ef}
+input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(11,116,255,0.08)}
+button{cursor:pointer}
+
+/* messages */
+.success{color:green}
+.error{color:#b91c1c}
+
+/* simple slide in animations */
+.slide-in{animation:slideIn 600ms ease both}
+@keyframes slideIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* simple slider */
+.slider{position:relative;overflow:hidden;border-radius:8px}
+.slider .slides{display:flex;transition:transform 500ms ease}
+.slide{min-width:100%;padding:28px;color:#fff;display:flex;align-items:center;justify-content:center;height:160px}
+.slide-1{background:linear-gradient(135deg,#0b74ff,#6ec1ff)}
+.slide-2{background:linear-gradient(135deg,#7c3aed,#b794f4)}
+.slide-3{background:linear-gradient(135deg,#ff6b6b,#ffb86b)}
+.slider-controls{position:absolute;right:12px;top:12px;display:flex;gap:8px}
+.control{background:rgba(255,255,255,0.18);padding:6px;border-radius:6px;color:#fff}
+
+/* responsive */
+@media (max-width:720px){.container{margin:12px;padding:12px}}
